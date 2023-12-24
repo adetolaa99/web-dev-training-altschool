@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="./assets/index.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <img src="./assets/icons/Logo.png" alt="Logo" />
+      <div class="heading">
+        <h1>For Individuals</h1>
+        <p class="text-one">
+          Inspiring wholesome harmony for the mind, body and spirit, for
+          everyone, everywhere.
+        </p>
+        <p class="text-two">
+          Start benefiting from the wellness experience. For companies looking
+          on increasing productivity, and improving organization wellness.
+        </p>
+      </div>
+    </header>
+
+    <div class="form-box">
+      <form action="#">
+        <div class="form-grp-1">
+          <div class="form-elements">
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname" placeholder="Tolu" required />
+          </div>
+          <div class="form-elements">
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastnme" required />
+          </div>
+        </div>
+
+        <div class="form-grp-2">
+          <div class="form-elements">
+            <label for="gender">Gender</label>
+            <select name="gender" id="gender">
+              <option value="">Select here</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+          <div class="form-elements">
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" required />
+          </div>
+        </div>
+
+        <div class="form-grp-3">
+          <div class="form-elements">
+            <label for="weight">Weight (KG)</label>
+            <input
+              type="text"
+              id="weight"
+              placeholder="Enter weight"
+              required
+            />
+          </div>
+          <div class="form-elements">
+            <label for="height">Height (CM)</label>
+            <input
+              type="text"
+              id="height"
+              placeholder="Enter height here.."
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-elements">
+          <label for="activitylevel">Activity level</label>
+          <select name="activitylevel" id="activitylevel">
+            <option value="" disabled selected>Select here</option>
+            <option value="Excellent">Excellent</option>
+            <option value="Good">Good</option>
+            <option value="Fair">Fair</option>
+            <option value="Bad">Bad</option>
+          </select>
+        </div>
+
+        <div class="form-ele">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            minlength="4"
+            maxlength="12"
+            required
+          />
+          <button type="submit" class="button">Register</button>
+        </div>
+      </form>
+
+      <div class="footer">
+        <p class="tandc">
+          By clicking Register, you agree to our
+          <a href="#">Terms of Use</a> and our <a href="#">Privacy Policy.</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -16,25 +16,27 @@
 }
 
 body {
+  font-family: 'Fira Sans', sans-serif;
   background: var(--bg-white);
-  padding: 20px;
+  padding: 60px;
 }
 
-img {
+.header img {
   filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.1));
   position: relative;
   right: 14px;
 }
 
-header h1 {
+.header h1 {
   color: var(--black);
 }
 
-header p {
-  font-size: 16px;
-  line-height: 25px;
+.text-one {
+  width: 327px;
   color: var(--grey);
-  max-width: 70%;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 25px;
 }
 
 .text-two {
@@ -50,6 +52,7 @@ header p {
 
 form {
   padding: 20px;
+  color: var(--txt-headings);
 }
 
 form label {
@@ -77,6 +80,36 @@ select {
   outline: none;
 }
 
+input:focus,
+select:focus {
+  border-radius: 2px;
+  border: 1px solid var(--green);
+}
+
+#gender,
+#dob,
+#activityLevel,
+::placeholder {
+  color: var(--grey);
+  cursor: pointer;
+}
+
+#gender:focus,
+#dob:focus,
+#activityLevel:focus {
+  color: var(--cl-black);
+}
+
+input[type="date"]::before {
+  content: attr(data-placeholder);
+  width: 100%;
+  color: var(--grey);
+}
+input[type="date"]:focus::before,
+input[type="date"]:valid::before {
+  display: none;
+}
+
 .button {
   min-width: 100%;
   height: 48px;
@@ -89,7 +122,7 @@ select {
   cursor: pointer;
 }
 
-.form-ele {
+.form-password {
   position: relative;
 }
 
@@ -102,8 +135,14 @@ select {
   text-align: center;
 }
 
-/*for desktop*/
-@media screen and (min-width: 1024px) {
+.tandc a {
+  color: var(--green);
+  cursor: pointer;
+}
+
+/*Media query for desktop*/
+
+@media screen and (min-width: 1440px) {
   body {
     margin: 0 3rem;
     display: flex;
@@ -111,27 +150,28 @@ select {
     justify-content: center;
   }
 
-  header {
+  .header {
     padding-left: 3rem;
     padding-bottom: 6rem;
   }
 
-  header img {
+  .header img {
     width: 77.333px;
     height: 80px;
   }
 
-  header h1 {
+  .header h1 {
     margin-top: 0;
     font-size: 40px;
   }
 
-  header p {
-    width: 460px;
-  }
-
   .text-two {
+    color: var(--grey);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
     display: block;
+    width: 460px;
   }
 
   .text-one {
@@ -142,22 +182,31 @@ select {
     padding: 20px;
   }
 
+  form {
+    color: var(--txt-headings);
+  }
+
   .form-grp-1,
   .form-grp-2,
   .form-grp-3 {
     display: flex;
-    gap: 20px;
+    justify-content: space-between;
+    gap: 10px;
   }
 
   input,
   select {
-    border-radius: 15px;
-    padding: 2px;
+    width: 238px;
+    padding: 5px;
+  }
+
+  input:focus,
+  select:focus {
+    border: 2px solid var(--green);
   }
 
   #activitylevel,
   #password {
-    width: 100%;
     padding: 2px;
   }
 

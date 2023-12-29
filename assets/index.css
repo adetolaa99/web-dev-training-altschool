@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap");
+
 * {
   box-sizing: border-box;
 }
@@ -16,7 +18,7 @@
 }
 
 body {
-  font-family: 'Fira Sans', sans-serif;
+  font-family: "Fira Sans", sans-serif;
   background: var(--bg-white);
   padding: 60px;
 }
@@ -32,7 +34,7 @@ body {
 }
 
 .text-one {
-  width: 327px;
+  width: 100%;
   color: var(--grey);
   font-size: 16px;
   font-weight: 300;
@@ -55,25 +57,34 @@ form {
   color: var(--txt-headings);
 }
 
-form label {
+.form-elements label {
+  display: block;
   color: var(--Text-Headings);
   font-size: 14px;
   font-weight: 600;
-  line-height: normal;
   letter-spacing: 0.1px;
 }
 
-input,
-select {
-  border-radius: 2px;
+.input-field {
+  width: 100%;
+  padding: 5px;
   border: 1px solid var(--border);
-  min-width: 100%;
   height: 48px;
   flex-shrink: 0;
-  padding: 10px;
-  margin: 12px auto;
-  font-weight: 400;
-  line-height: 10px;
+  margin: 10px auto;
+  letter-spacing: 0.2px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+.input-field-two {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid var(--border);
+  height: 48px;
+  flex-shrink: 0;
+  margin: 10px auto;
   letter-spacing: 0.2px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -88,7 +99,7 @@ select:focus {
 
 #gender,
 #dob,
-#activityLevel,
+#activitylevel,
 ::placeholder {
   color: var(--grey);
   cursor: pointer;
@@ -96,27 +107,18 @@ select:focus {
 
 #gender:focus,
 #dob:focus,
-#activityLevel:focus {
+#activitylevel:focus {
   color: var(--cl-black);
 }
 
-input[type="date"]::before {
-  content: attr(data-placeholder);
-  width: 100%;
-  color: var(--grey);
-}
-input[type="date"]:focus::before,
-input[type="date"]:valid::before {
-  display: none;
+select {
+  background: var(--white);
 }
 
 .button {
   min-width: 100%;
   height: 48px;
   background: var(--green);
-  color: var(--cl-white);
-  border-radius: 6px;
-  outline: none;
   box-shadow: 0px 4px 50px 0px rgba(4, 8, 19, 0.1);
   border: none;
   cursor: pointer;
@@ -126,12 +128,19 @@ input[type="date"]:valid::before {
   position: relative;
 }
 
+.form-password i {
+  position: absolute;
+  top: 60%;
+  right: 8px;
+  align-items: center;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
 .tandc {
   max-width: 316px;
   margin: 10px auto;
   font-size: 14px;
-  font-weight: 400;
-  line-height: 25px;
   text-align: center;
 }
 
@@ -182,22 +191,15 @@ input[type="date"]:valid::before {
     padding: 20px;
   }
 
-  form {
-    color: var(--txt-headings);
-  }
-
   .form-grp-1,
   .form-grp-2,
   .form-grp-3 {
     display: flex;
-    justify-content: space-between;
-    gap: 10px;
+    gap: 20px;
   }
 
-  input,
-  select {
+  .input-field {
     width: 238px;
-    padding: 5px;
   }
 
   input:focus,

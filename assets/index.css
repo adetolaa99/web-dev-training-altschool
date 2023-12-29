@@ -94,7 +94,7 @@ form {
 input:focus,
 select:focus {
   border-radius: 2px;
-  border: 1px solid var(--green);
+  border: 2px solid var(--green);
 }
 
 #gender,
@@ -138,8 +138,8 @@ select {
 }
 
 .tandc {
-  max-width: 316px;
-  margin: 10px auto;
+  max-width: 100%;
+  margin: auto;
   font-size: 14px;
   text-align: center;
 }
@@ -149,7 +149,7 @@ select {
   cursor: pointer;
 }
 
-/*Media query for desktop*/
+/*Media query and specific styling for desktop version*/
 
 @media screen and (min-width: 1440px) {
   body {
@@ -202,19 +202,8 @@ select {
     width: 238px;
   }
 
-  input:focus,
-  select:focus {
-    border: 2px solid var(--green);
-  }
-
   #activitylevel,
   #password {
     padding: 2px;
-  }
-
-  .tandc {
-    margin: auto;
-    max-width: 100%;
-    font-size: 16px;
   }
 }
